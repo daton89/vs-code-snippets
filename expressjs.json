@@ -45,53 +45,6 @@
 		],
 		"description": "Express Controller"
 	},
-	{
-	// Snippet for create a basic Express.js Controller
-	// Example:
-	"Express Controller": {
-		"prefix": "expressctrl",
-		"body": [
-			"'use strict'",
-			"",
-			"const $1 = require('./$2.model').model",
-			"const rest = require('../../libs/rest')",
-			"",
-			"module.exports = {",
-			"index(req, res) {",
-			"$1.find()",
-			".then(rest.handleEntityNotFound(res))",
-			".then(rest.respondWithResult(res))",
-			".catch(rest.handleErrorMongoose(res))",
-			"},",
-			"show(req, res) {",
-			"$1.findById(req.params.id)",
-			".then(rest.handleEntityNotFound(res))",
-			".then(rest.respondWithResult(res))",
-			".catch(rest.handleErrorMongoose(res))",
-			"},",
-			"create(req, res) {",
-			"$1.create(req.body)",
-			".then(rest.handleEntityNotFound(res))",
-			".then(rest.respondWithResult(res))",
-			".catch(rest.handleErrorMongoose(res))",
-			"},",
-			"update(req, res) {",
-			"$1.findById(req.params.id)",
-			".then(rest.handleEntityNotFound(res))",
-			".then(rest.saveUpdates(req.body))",
-			".then(rest.respondWithResult(res))",
-			".catch(rest.handleErrorMongoose(res))",
-			"},",
-			"destroy(req, res) {",
-			"$1.findById(req.params.id)",
-			".then(rest.handleEntityNotFound(res))",
-			".then(rest.removeEntity(res))",
-			".catch(rest.handleErrorMongoose(res))",
-			"}",
-			"}"
-		],
-		"description": "Express Controller"
-	},
 	"Express Index": {
 		"prefix": "expressindex",
 		"body": [
@@ -112,5 +65,4 @@
 		],
 		"description": "Express Index"
 	}
-}
 }
